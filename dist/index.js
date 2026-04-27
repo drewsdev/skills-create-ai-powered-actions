@@ -60562,7 +60562,10 @@ module.exports = exports.default;
 var __webpack_exports__ = {};
 const { run } = __nccwpck_require__(443);
 
-run();
+run().catch(error => {
+  console.error('Action failed:', error);
+  process.exit(1);
+});
 module.exports = __webpack_exports__;
 /******/ })()
 ;
